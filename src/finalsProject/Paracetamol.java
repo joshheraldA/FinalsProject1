@@ -1,6 +1,6 @@
 package finalsProject;
 
-public class Ibuprofen extends Medicine {
+public class Paracetamol extends Medicine {
 	
 	/*
 	 * constructor of medicine
@@ -11,14 +11,14 @@ public class Ibuprofen extends Medicine {
 	 * @param {name} name of the medicine
 	 * @param {symptoms} symptoms of the sickness the medicine is trying to solve
 	 */
-	public Ibuprofen(double cost, int id, String picture, String name, String[] symptoms) {
+	public Paracetamol(double cost, int id, String picture, String name, String[] symptoms) {
 		super(cost, id, picture, name, symptoms);
 	}
 	
 	/*
 	 * overloading the Ibuprofen constructor
 	 */
-	public Ibuprofen() {
-		super(0.0, 100, "Null", "Ibuprofen", new String[3]);
+	public Paracetamol() {
+		super(0.0, 100, "Null", "Paracetamol", new String[3]);
 	}
 }

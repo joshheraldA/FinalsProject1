@@ -13,7 +13,12 @@ public class MedicineInventory {
 		
 		// create a list of the medicine that is available in inventory
 		medicineList = new Medicine[]{
-			new Ibuprofen()
+			new Ibuprofen(200.99, 101, "PictureReferencePath1", "Ibuprofen", new String[]{
+				"Swelling", "Stiffness", "Redness", "Elevated Body Temeprature"
+			}),
+			new Paracetamol(100.99, 102, "PictureReferencePath2", "Paracetamol", new String[] {
+				"Headache", "Elevated Body Temeprature", "Body Aches"
+			})
 			
 		};
 	}
@@ -51,10 +56,14 @@ public class MedicineInventory {
 
 	/*
 	 * displays all medicine
+	 * 
+	 * @return {void} no return
 	 */
 	public void displayMedicine() {
+		System.out.println("NAME\t\t\tID\t\tCOST");
+		System.out.println("==============================================================");
 		for(Medicine medicine: medicineList) {
-			System.out.println(medicine.getName());
+			System.out.println(medicine.getName() + "\t\t" + medicine.getId() + "\t\t" + medicine.getCost());
 		}
 	}
 	
