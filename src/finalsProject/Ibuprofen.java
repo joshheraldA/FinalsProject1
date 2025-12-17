@@ -11,14 +11,15 @@ public class Ibuprofen extends Medicine {
 	 * @param {name} name of the medicine
 	 * @param {symptoms} symptoms of the sickness the medicine is trying to solve
 	 */
-	public Ibuprofen(double cost, int id, String picture, String name, String[] symptoms) {
-		super(cost, id, picture, name, symptoms);
+	public Ibuprofen(double cost, int id, String name, String[] symptoms) {
+		super(cost, id, name, symptoms);
+		this.setPicture("../../images/ibuprofen.jpeg");
 	}
 	
 	/*
 	 * overloading the Ibuprofen constructor
 	 */
 	public Ibuprofen() {
-		super(0.0, 100, "Null", "Ibuprofen", new String[3]);
+		super(0.0, 100, "Ibuprofen", new String[3]);
 	}
 }
