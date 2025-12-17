@@ -22,7 +22,7 @@ public class Main {
 //	
 //		if(file.exists()) {
 //			System.out.println("File ecxists");
-//		}
+//		}git 
 //		else {
 //			System.out.println("File does not exists");
 //		}
