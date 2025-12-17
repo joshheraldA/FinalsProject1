@@ -13,7 +13,7 @@ public class Ibuprofen extends Medicine {
 	 */
 	public Ibuprofen(double cost, int id, String name, String[] symptoms) {
 		super(cost, id, name, symptoms);
-		this.setPicture("../../images/ibuprofen.jpeg");
+		this.setPicture("./images/ibuprofen.jpeg");
 	}
 	
 	/*

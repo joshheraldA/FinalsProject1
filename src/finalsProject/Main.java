@@ -1,5 +1,7 @@
 package finalsProject;
 
+import java.io.File;
+
 public class Main {
 	public static void main(String[] args) {
 		MedicineInventory inventory = new MedicineInventory();
@@ -14,8 +16,17 @@ public class Main {
 		System.out.println(medicine.getName());
 		
 		
+		File file = new File(medicine.getPicture());
+	
+		if(file.exists()) {
+			System.out.println("File ecxists");
+		}
+		else {
+			System.out.println("File does not exists");
+		}
 		
 		
+		
+	} 
 
-	}
 }
