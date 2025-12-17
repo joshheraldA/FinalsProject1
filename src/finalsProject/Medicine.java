@@ -2,7 +2,7 @@ package finalsProject;
 
 abstract class Medicine {
 	private double cost; 
-	private int id, stock;
+	private int id;
 	private String picture, name;
 	private String[] symptoms;
 	
@@ -20,7 +20,6 @@ abstract class Medicine {
 		 this.setId(id);
 		 this.setName(name);
 		 this.setSymptoms(symptoms);
-		 this.setStock(100);
 	}
 		
 	/*
@@ -28,13 +27,6 @@ abstract class Medicine {
 	 * @return {cost} the cost of the medicine
 	 */
 	public double getCost() { return this.cost; }
-	
-	/*
-	 * returns the number of stocks of the medicine 
-	 * @return {stock} remaining stocks of the medicine
-	 */
-	public int getStock() { return this.stock; }
-	
 	
 	/*
 	 * returns the id
@@ -94,10 +86,5 @@ abstract class Medicine {
 	 */
 	public void setSymptoms(String[] symptoms) { this.symptoms = symptoms; }
 	
-	/*
-	 * set the stock
-	 * #param {stock} the amount of stock you want to add
-	 */
-	public void setStock(int amount) { this.stock += amount; }
 	
 }
