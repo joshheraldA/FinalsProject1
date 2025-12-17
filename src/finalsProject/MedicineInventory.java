@@ -13,10 +13,10 @@ public class MedicineInventory {
 		
 		// create a list of the medicine that is available in inventory
 		medicineList = new Medicine[]{
-			new Ibuprofen(200.99, 101, "PictureReferencePath1", "Ibuprofen", new String[]{
+			new Ibuprofen(200.99, 101, "Ibuprofen", new String[]{
 				"Swelling", "Stiffness", "Redness", "Elevated Body Temeprature"
 			}),
-			new Paracetamol(100.99, 102, "PictureReferencePath2", "Paracetamol", new String[] {
+			new Paracetamol(100.99, 102, "Paracetamol", new String[] {
 				"Headache", "Elevated Body Temeprature", "Body Aches"
 			})
 			
@@ -49,9 +49,12 @@ public class MedicineInventory {
 	 * @throws {Error} if cannot find medicine
 	 */
 	public Medicine findMedicine(int id) {
-		Medicine medicine = new Ibuprofen();
-		
-		return medicine;
+		for(Medicine medicine: medicineList) {
+			if(medicine.getId() == id) {
+				return medicine;
+			}
+		}
+		return null;
 	}
 
 	/*

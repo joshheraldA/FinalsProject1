@@ -15,12 +15,12 @@ abstract class Medicine {
 	 * @param {name} name of the medicine
 	 * @param {symptoms} symptoms of the sickness the medicine is trying to solve
 	 */
-	public Medicine(double cost, int id, String picture, String name, String[] symptoms) {
+	public Medicine(double cost, int id, String name, String[] symptoms) {
 		 this.setCost(cost);
 		 this.setId(id);
 		 this.setName(name);
 		 this.setSymptoms(symptoms);
-		 this.setPicture(picture);
+		 this.setStock(100);
 	}
 		
 	/*
