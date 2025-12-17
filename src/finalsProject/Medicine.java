@@ -2,14 +2,14 @@ package finalsProject;
 
 abstract class Medicine {
 	private double cost; 
-	private int id;
+	private int id, stock;
 	private String picture, name;
 	private String[] symptoms;
 	
 	/*
 	 * constructor of medicine
 	 * 
-	 * @param {cost} cost of the medicine
+	 * @param {cost} cost of the medicine in php
 	 * @param {id} id of the medicine
 	 * @param {picture} relative picture path relating to the medicine
 	 * @param {name} name of the medicine
@@ -28,6 +28,13 @@ abstract class Medicine {
 	 * @return {cost} the cost of the medicine
 	 */
 	public double getCost() { return this.cost; }
+	
+	/*
+	 * returns the number of stocks of the medicine 
+	 * @return {stock} remaining stocks of the medicine
+	 */
+	public int getStock() { return this.stock; }
+	
 	
 	/*
 	 * returns the id
@@ -57,8 +64,8 @@ abstract class Medicine {
 	
 	
 	/*
-	 * set the cost
-	 * @param {cost} the new cost of the medicine
+	 * set the cost php
+	 * @param {cost} the new cost of the medicine in php
 	 */
 	public void setCost(double cost) { this.cost = cost; }
 	
@@ -87,5 +94,10 @@ abstract class Medicine {
 	 */
 	public void setSymptoms(String[] symptoms) { this.symptoms = symptoms; }
 	
+	/*
+	 * set the stock
+	 * #param {stock} the amount of stock you want to add
+	 */
+	public void setStock(int amount) { this.stock += amount; }
 	
 }
