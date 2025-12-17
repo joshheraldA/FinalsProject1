@@ -9,6 +9,7 @@ public class SearchEngine {
 	 * 
 	 * @param {symptoms} the symptoms we want to find
 	 * 
+	 * @return {filteredMedicines} the medicines that has the afromentioned symptoms in symptoms param
 	 */
 	public ArrayList<Medicine> filterMedicines(ArrayList<String> symptoms) {
 		ArrayList<Medicine> filteredMedicines = new ArrayList<Medicine>();
