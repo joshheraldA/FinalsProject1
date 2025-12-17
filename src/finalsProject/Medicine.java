@@ -1,7 +1,6 @@
 package finalsProject;
 
 abstract class Medicine {
-	private double cost; 
 	private int id;
 	private String picture, name;
 	private String[] symptoms;
@@ -15,18 +14,12 @@ abstract class Medicine {
 	 * @param {name} name of the medicine
 	 * @param {symptoms} symptoms of the sickness the medicine is trying to solve
 	 */
-	public Medicine(double cost, int id, String name, String[] symptoms) {
-		 this.setCost(cost);
+	public Medicine(int id, String name, String[] symptoms) {
 		 this.setId(id);
 		 this.setName(name);
 		 this.setSymptoms(symptoms);
 	}
 		
-	/*
-	 * returns the cost 
-	 * @return {cost} the cost of the medicine
-	 */
-	public double getCost() { return this.cost; }
 	
 	/*
 	 * returns the id
@@ -52,14 +45,6 @@ abstract class Medicine {
 	 * @return {symptoms} symptoms of the sickness that the medicine is trying to heal
 	 */
 	public String[] getSymptoms() { return this.symptoms; }
-	
-	
-	
-	/*
-	 * set the cost php
-	 * @param {cost} the new cost of the medicine in php
-	 */
-	public void setCost(double cost) { this.cost = cost; }
 	
 	/*
 	 * set the id
