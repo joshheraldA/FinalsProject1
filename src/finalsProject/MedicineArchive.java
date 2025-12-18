@@ -25,6 +25,7 @@ public class MedicineArchive {
 		medicineList.add(new Phenylephrine());
 		medicineList.add(new Cetirizine());
 		medicineList.add(new Loperamide());
+		medicineList.add(new Chlorphenamine());
 	}
 	
 	/* 

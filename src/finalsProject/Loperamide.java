@@ -24,7 +24,7 @@ public class Loperamide extends Medicine {
 	
 	public Loperamide() {
 		super(106, "Loperamide", new String[]{
-				"Loose Watery Stool", "Abdominal Cramps", "Frequent Bowel Movements", "indigestion "
+				"Loose Watery Stool", "Abdominal Cramps", "Frequent Bowel Movements", "indigestion"
 		});
 		this.setPicture("./images/Loperamide.jpg");
 
