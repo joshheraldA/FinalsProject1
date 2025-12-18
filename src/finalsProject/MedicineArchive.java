@@ -26,7 +26,13 @@ public class MedicineArchive {
 		medicineList.add(new Cetirizine());
 		medicineList.add(new Loperamide());
 		medicineList.add(new Chlorphenamine());
-	}
+		medicineList.add(new Naproxen());
+		medicineList.add(new Ambroxol());
+		medicineList.add(new Oxymetazoline());
+		medicineList.add(new Loratadine());
+		medicineList.add(new Peptobismol());
+		medicineList.add(new Benadryl());
+		}
 	
 	/* 
 	 * find the medicine based on the id

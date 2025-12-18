@@ -1,6 +1,6 @@
 package finalsProject;
 
-public class Ibuprofen extends Medicine {
+public class Ambroxol extends Medicine {
 	
 	/*
 	 * constructor of medicine
@@ -11,19 +11,21 @@ public class Ibuprofen extends Medicine {
 	 * @param {name} name of the medicine
 	 * @param {symptoms} symptoms of the sickness the medicine is trying to solve
 	 */
-	public Ibuprofen(int id, String name, String[] symptoms) {
+	public Ambroxol(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/ibuprofen.jpeg");
+		this.setPicture("./images/ambroxol.jpeg");
 	}
 	
+	
 	/*
-	 * overloading the Ibuprofen constructor
+	 * overloading the Ambroxol constructor
 	 */
-	public Ibuprofen() {
-		super(101, "Ibuprofen", new String[]{
-				"Swelling", "Stiffness", "Redness", "Elevated Body Temperature"
+	
+	public Ambroxol() {
+		super(109, "Ambroxol", new String[]{
+				"Phlegm", "Chest Congestion", "Difficulty Coughing Up Mucus", "Wet Cough"
 		});
-		this.setPicture("./images/ibuprofen.jpg");
+		this.setPicture("./images/ambroxol.jpeg");
 
 	}
 }
