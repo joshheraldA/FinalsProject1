@@ -12,7 +12,7 @@ public class Main {
 		
 		// finds medicine for you
 		// switch to a id that is not below to get the error and the function will return null
-		Medicine medicine = archive.findMedicine(101);
+		Medicine medicine = archive.findMedicine(107);
 		if(medicine == null) throw new Error("Could not find the medicine");
 		System.out.println(medicine.getName());
 		
@@ -21,8 +21,8 @@ public class Main {
 //		File file = new File(medicine.getPicture());
 //	
 //		if(file.exists()) {
-//			System.out.pritln("File ecxists");
-//		}git 
+//			System.out.println("File exists");
+//		}
 //		else {
 //			System.out.println("File does not exists");
 //		}
@@ -30,7 +30,7 @@ public class Main {
 		SearchEngine engine = new SearchEngine();
 		
 		ArrayList<String> symptomExample = new ArrayList<String>();
-		symptomExample.add("Elevated Body Temperature");
+		symptomExample.add("Headache");
 		ArrayList<Medicine> medicines = engine.filterMedicines(symptomExample);
 		
 		for(Medicine medicine1: medicines) {
