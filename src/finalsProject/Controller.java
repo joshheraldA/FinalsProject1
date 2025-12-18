@@ -45,6 +45,9 @@ public class Controller {
 	@FXML
 	TilePane medicineTilePane;
 	
+	@FXML
+	Button removeButton;
+	
 	
     @FXML
     private void initialize() {
@@ -84,6 +87,13 @@ public class Controller {
         for(Medicine meds : medicines ) {
         	VBox card = createCard(meds.getName(), meds.getPicture());
         	medicineTilePane.getChildren().add(card);
+        }
+        
+        
+        if(selectedSymptoms.isEmpty()) {
+        	if(!removeButton.isDisable()) {
+        		removeButton.setDisable(true);
+        	}
         }
         
     }
@@ -136,6 +146,7 @@ public class Controller {
 			
 		}
     	System.out.println(medicines.size());
+    	
     	updateMedList();
     	
     }
@@ -156,6 +167,12 @@ public class Controller {
     		updateMedList();
     		
     	}
+    	
+    	if(selectedSymptoms.isEmpty()) {
+        	if(!removeButton.isDisable()) {
+        		removeButton.setDisable(true);
+        	}
+        }
     }
     
     
@@ -178,12 +195,23 @@ public class Controller {
                 String item = getItem();
                 if (item != null) {
                     if (checkBox.isSelected()) {
-                    	System.out.println("HE");
+                    	
                         if (!selectedSymptoms.contains(item)) {
                             selectedSymptoms.add(item);
                         }
+                        
+                        if(removeButton.isDisable()) {
+                    		removeButton.setDisable(false);
+                    	}
+                        
+                        
                     } else {
                         selectedSymptoms.remove(item);
+                        if(selectedSymptoms.isEmpty()) {
+                        	if(!removeButton.isDisable()) {
+                        		removeButton.setDisable(true);
+                        	}
+                        }
                     }
                     
                 }

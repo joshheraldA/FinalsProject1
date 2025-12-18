@@ -16,7 +16,7 @@
     <Label fx:id="resultLabel" layoutX="20" layoutY="480" style="-fx-font-size: 14px;" text="" />
    <ComboBox fx:id="symptomsComboBox" layoutX="28.0" layoutY="110.0" prefHeight="25.0" prefWidth="150.0" />
    <ListView fx:id="symptomsList" layoutX="28.0" layoutY="154.0" prefHeight="474.0" prefWidth="332.0" />
-   <TilePane fx:id="medicineTilePane" hgap="10" layoutX="482.0" layoutY="74.0" prefColumns="5" prefHeight="700.0" prefWidth="700.0" vgap="10" />
-   <Button layoutX="258.0" layoutY="110.0" mnemonicParsing="false" onAction="#removeSelectedSymptoms" text="Remove Selected" />
+   <TilePane fx:id="medicineTilePane" hgap="10" layoutX="482.0" layoutY="74.0" prefColumns="5" prefHeight="786.0" prefWidth="791.0" vgap="10" />
+   <Button fx:id="removeButton" layoutX="258.0" layoutY="110.0" mnemonicParsing="false" onAction="#removeSelectedSymptoms" text="Remove Selected" />
 
 </Pane>
