@@ -22,6 +22,7 @@ public class MedicineArchive {
 		medicineList.add(new Ibuprofen());
 		medicineList.add(new Paracetamol());
 		medicineList.add(new Carbocisteine());
+		medicineList.add(new Phenylephrine());
 	}
 	
 	/* 
