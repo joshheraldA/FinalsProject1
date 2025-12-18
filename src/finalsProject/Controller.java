@@ -29,7 +29,7 @@ public class Controller {
 	private SearchEngine engine = new SearchEngine();
 	private MedicineArchive archive = new MedicineArchive();
 	private ArrayList<String> symptomListData = new ArrayList<String>();
-	private ArrayList<Medicine> medicines;
+	private ArrayList<Medicine> medicines = archive.getMedicineList();
 	
 	@FXML
 	ComboBox<String> symptomsComboBox;
@@ -57,19 +57,23 @@ public class Controller {
     	symptomsComboBox.getItems().addAll(items);
         symptomsComboBox.setValue(items[0]);
         
-        for (int i = 1; i <= 6; i++) {
-            VBox card = createCard("Item " + i, "paracetamol.jpg");
-            medicineTilePane.getChildren().add(card);
+//        for (int i = 1; i <= 6; i++) {
+//            VBox card = createCard("Item " + i, "paracetamol.jpg");
+//            medicineTilePane.getChildren().add(card);
+//        }
+        
+        for(Medicine meds : medicines ) {
+        	VBox card = createCard(meds.getName(), "paracetamol.jpg");
+        	medicineTilePane.getChildren().add(card);
         }
         
     }
+    
     
     @FXML
     private void submitAction() {
     	addSymptom();
     }
-    
-    
     
     
     private VBox createCard(String title, String imagePath) {
@@ -91,6 +95,14 @@ public class Controller {
 	    return card;
 	}
     
+    private void updateMedList() {
+    	medicineTilePane.getChildren().clear();
+    	for(Medicine meds : medicines ) {
+        	VBox card = createCard(meds.getName(), "paracetamol.jpg");
+        	medicineTilePane.getChildren().add(card);
+        }
+    }
+    
     private void addSymptom() {
     	
     	if(!symptomListData.contains(symptomsComboBox.getValue())) {
@@ -105,6 +117,7 @@ public class Controller {
 			
 		}
     	System.out.println(medicines.size());
+    	updateMedList();
     	
     }
     
