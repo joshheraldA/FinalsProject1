@@ -1,11 +1,15 @@
 package finalsProject;
 
 import java.io.File;
+
 import java.util.ArrayList;
+
+
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import javafx.application.Application;
@@ -35,6 +39,7 @@ public class Main extends Application{
 	}
 	public static void main(String[] args) {
 		launch(args);
+		
 		MedicineArchive archive = new MedicineArchive();
 		
 		archive.displayMedicine();
