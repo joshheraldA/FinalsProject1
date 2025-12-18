@@ -47,20 +47,20 @@ public class Main extends Application{
 		
 		// finds medicine for you
 		// switch to a id that is not below to get the error and the function will return null
-		Medicine medicine = archive.findMedicine(107);
+		Medicine medicine = archive.findMedicine(113);
 		if(medicine == null) throw new Error("Could not find the medicine");
 		System.out.println(medicine.getName());
 		
 		
 		// just to check file exists
-//		File file = new File(medicine.getPicture());
-//	
-//		if(file.exists()) {
-//			System.out.println("File exists");
-//		}
-//		else {
-//			System.out.println("File does not exists");
-//		}
+		File file = new File(medicine.getPicture());
+	
+		if(file.exists()) {
+			System.out.println("File exists");
+		}
+		else {
+			System.out.println("File does not exists");
+		}
 
 		SearchEngine engine = new SearchEngine();
 		
@@ -73,6 +73,6 @@ public class Main extends Application{
 		}
 		
 		
-	} 
-
+		System.out.println(archive.listOfSymptoms());
+	}
 }

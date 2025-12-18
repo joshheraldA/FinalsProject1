@@ -26,7 +26,13 @@ public class MedicineArchive {
 		medicineList.add(new Cetirizine());
 		medicineList.add(new Loperamide());
 		medicineList.add(new Chlorphenamine());
-	}
+		medicineList.add(new Naproxen());
+		medicineList.add(new Ambroxol());
+		medicineList.add(new Oxymetazoline());
+		medicineList.add(new Loratadine());
+		medicineList.add(new Peptobismol());
+		medicineList.add(new Benadryl());
+		}
 	
 	/* 
 	 * find the medicine based on the id
@@ -56,6 +62,25 @@ public class MedicineArchive {
 			System.out.println(medicine.getName() + "\t\t" + medicine.getId() + "\t\t" + Arrays.toString(medicine.getSymptoms()));
 
 		});
+	}
+	
+	/*
+	 * returns a list of symptoms available
+	 * 
+	 * @return {symptoms} the list of all symptoms that the medicines covers
+	 */
+	public ArrayList<String> listOfSymptoms() {
+		ArrayList<String> symptoms = new ArrayList<String>();
+		
+		this.medicineList.forEach(medicine -> {
+			for(String symptom: medicine.getSymptoms()) {
+				if(!symptoms.contains(symptom)) {
+					symptoms.add(symptom);
+				}
+			}
+		});
+			
+		return symptoms;
 	}
 	
 }
