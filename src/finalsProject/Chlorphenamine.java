@@ -14,7 +14,7 @@ public class Chlorphenamine extends Medicine{
 
 	public Chlorphenamine(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/Chlorphenamine.jpg");	
+		this.setPicture("/images/Chlorphenamine.jpg");	
 	}
 	
 	/*
@@ -25,7 +25,7 @@ public class Chlorphenamine extends Medicine{
 		super(107, "Chlorphenamine", new String[]{
 				"Runny Nose", "Uncontrollable Sneezing", "Itchy Watery Eyes", "Itchy Throat"
 		});
-		this.setPicture("./images/Chlorphenamine.jpg");
+		this.setPicture("/images/Chlorphenamine.jpg");
 
 	}
 
