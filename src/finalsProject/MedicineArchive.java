@@ -21,6 +21,7 @@ public class MedicineArchive {
 	public void initMedicine() {
 		medicineList.add(new Ibuprofen());
 		medicineList.add(new Paracetamol());
+		medicineList.add(new Carbocisteine());
 	}
 	
 	/* 
