@@ -16,7 +16,7 @@ public class Oxymetazoline extends Medicine {
 	
 	public Oxymetazoline(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/oxymetazoline.png");
+		this.setPicture("/images/oxymetazoline.png");
 	}
 	
 	/*
@@ -27,7 +27,7 @@ public class Oxymetazoline extends Medicine {
 		super(110, "Oxymetazoline", new String[]{
 				"Nasal Congestion", "Sinus Pressure", "Swollen Nasal Passage", "Ear Congestion"
 		});
-		this.setPicture("./images/oxymetazoline.png");
+		this.setPicture("/images/oxymetazoline.png");
 
 	}
 	

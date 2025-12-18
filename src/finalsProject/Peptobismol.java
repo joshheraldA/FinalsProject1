@@ -16,7 +16,7 @@ public class Peptobismol extends Medicine{
 	
 	public Peptobismol(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/peptobismol.jpeg");
+		this.setPicture("/images/peptobismol.jpeg");
 	}
 	
 	/*
@@ -27,7 +27,7 @@ public class Peptobismol extends Medicine{
 		super(112, "Peptobismol", new String[]{
 				"Loose Watery Stool", "Abdominal Cramps", "Frequent Bowel Movements", "indigestion"
 		});
-		this.setPicture("./images/peptobismol.jpeg");
+		this.setPicture("/images/peptobismol.jpeg");
 
 	}
 	

@@ -57,7 +57,7 @@ public class Controller {
     	symptomsList.setCellFactory(listView -> new CheckBoxAtEndCell());
     	
     	
-    	String[] items = {"Swelling",
+    	String[] items = { "Swelling",
     		    "Stiffness",
     		    "Redness",
     		    "Elevated Body Temperature",
@@ -70,16 +70,17 @@ public class Controller {
     		    "Nasal Congestion",
     		    "Sinus Pressure",
     		    "Swollen Nasal Passages",
+    		    "Swollen Nasal Passage",
     		    "Ear Congestion",
     		    "Runny Nose",
     		    "Uncontrollable Sneezing",
     		    "Itchy Watery Eyes",
     		    "Skin Itching",
+    		    "Itchy Throat",
     		    "Loose Watery Stool",
     		    "Abdominal Cramps",
     		    "Frequent Bowel Movements",
-    		    "Indigestion",
-    		    "Itchy Throat"};       
+    		    "indigestion"};       
     	
     	symptomsComboBox.getItems().addAll(items);
         symptomsComboBox.setValue(items[0]);

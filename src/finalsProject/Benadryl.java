@@ -12,7 +12,7 @@ public class Benadryl extends Medicine {
 	 */
 	public Benadryl(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/benadryl.jpeg");
+		this.setPicture("/images/benadryl.jpeg");
 	}
 	
 	
@@ -24,7 +24,7 @@ public class Benadryl extends Medicine {
 		super(113, "Benadryl", new String[]{
 				"Uncontrollable Sneezing", "Itchy Watery Eyes", "Skin Itching", "Itchy Throat"
 		});
-		this.setPicture("./images/benadryl.jpeg");
+		this.setPicture("/images/benadryl.jpeg");
 
 	}
 }

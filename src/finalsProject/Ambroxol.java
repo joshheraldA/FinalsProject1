@@ -13,7 +13,7 @@ public class Ambroxol extends Medicine {
 	 */
 	public Ambroxol(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/ambroxol.jpeg");
+		this.setPicture("/images/ambroxol.jpeg");
 	}
 	
 	
@@ -25,7 +25,7 @@ public class Ambroxol extends Medicine {
 		super(109, "Ambroxol", new String[]{
 				"Phlegm", "Chest Congestion", "Difficulty Coughing Up Mucus", "Wet Cough"
 		});
-		this.setPicture("./images/ambroxol.jpeg");
+		this.setPicture("/images/ambroxol.jpeg");
 
 	}
 }

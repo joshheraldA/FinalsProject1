@@ -16,7 +16,7 @@ public class Loratadine extends Medicine {
 	
 	public Loratadine(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/loratadine.png");
+		this.setPicture("/images/loratadine.png");
 	}
 	
 	/*
@@ -27,7 +27,7 @@ public class Loratadine extends Medicine {
 		super(111, "Loratadine", new String[]{
 				"Runny Nose", "Uncontrollable Sneezing", "Itchy Watery Eyes", "Skin Itching", "Itchy Throat"
 		});
-		this.setPicture("./images/loratadine.png");
+		this.setPicture("/images/loratadine.png");
 
 	}	
 }
