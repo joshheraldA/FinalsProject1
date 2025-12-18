@@ -16,7 +16,7 @@ public class Cetirizine extends Medicine {
 	
 	public Cetirizine(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/Cetirizine.jpg");
+		this.setPicture("/images/Cetirizine.jpg");
 	}
 	
 	/*
@@ -27,7 +27,7 @@ public class Cetirizine extends Medicine {
 		super(105, "Cetirizine", new String[]{
 				"Runny Nose", "Uncontrollable Sneezing", "Itchy Watery Eyes", "Skin Itching"
 		});
-		this.setPicture("./images/Cetirizine.jpg");
+		this.setPicture("/images/Cetirizine.jpg");
 
 	}
 	
