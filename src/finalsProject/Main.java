@@ -1,9 +1,6 @@
 package finalsProject;
 
 import java.io.File;
-
-
-
 import java.util.ArrayList;
 
 import javafx.fxml.FXMLLoader;
@@ -54,7 +51,7 @@ public class Main extends Application{
 //		File file = new File(medicine.getPicture());
 //	
 //		if(file.exists()) {
-//			System.out.println("File ecxists");
+//			System.out.println("File exists");
 //		}
 //		else {
 //			System.out.println("File does not exists");
