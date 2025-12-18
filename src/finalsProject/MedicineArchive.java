@@ -58,4 +58,23 @@ public class MedicineArchive {
 		});
 	}
 	
+	/*
+	 * returns a list of symptoms available
+	 * 
+	 * @return {symptoms} the list of all symptoms that the medicines covers
+	 */
+	public ArrayList<String> listOfSymptoms() {
+		ArrayList<String> symptoms = new ArrayList<String>();
+		
+		this.medicineList.forEach(medicine -> {
+			for(String symptom: medicine.getSymptoms()) {
+				if(!symptoms.contains(symptom)) {
+					symptoms.add(symptom);
+				}
+			}
+		});
+			
+		return symptoms;
+	}
+	
 }

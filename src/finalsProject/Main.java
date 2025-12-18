@@ -2,6 +2,7 @@ package finalsProject;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -68,6 +69,6 @@ public class Main extends Application{
 		}
 		
 		
-	} 
-
+		System.out.println(archive.listOfSymptoms());
+	}
 }
