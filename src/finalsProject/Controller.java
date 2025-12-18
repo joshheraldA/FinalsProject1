@@ -31,6 +31,8 @@ public class Controller {
 	private ArrayList<String> symptomListData = new ArrayList<String>();
 	private ArrayList<Medicine> medicines = archive.getMedicineList();
 	
+	private ArrayList<String> selectedSymptoms = new ArrayList<String>();
+	
 	@FXML
 	ComboBox<String> symptomsComboBox;
 	
@@ -52,18 +54,35 @@ public class Controller {
     	symptomsList.setCellFactory(listView -> new CheckBoxAtEndCell());
     	
     	
-    	String[] items = {"Headache", "Stiffness", "Redness", "Elevated Body Temperature", "Swelling"};       
+    	String[] items = {"Swelling",
+    		    "Stiffness",
+    		    "Redness",
+    		    "Elevated Body Temperature",
+    		    "Headache",
+    		    "Body Aches",
+    		    "Phlegm",
+    		    "Chest Congestion",
+    		    "Difficulty Coughing Up Mucus",
+    		    "Wet Cough",
+    		    "Nasal Congestion",
+    		    "Sinus Pressure",
+    		    "Swollen Nasal Passages",
+    		    "Ear Congestion",
+    		    "Runny Nose",
+    		    "Uncontrollable Sneezing",
+    		    "Itchy Watery Eyes",
+    		    "Skin Itching",
+    		    "Loose Watery Stool",
+    		    "Abdominal Cramps",
+    		    "Frequent Bowel Movements",
+    		    "Indigestion",
+    		    "Itchy Throat"};       
     	
     	symptomsComboBox.getItems().addAll(items);
         symptomsComboBox.setValue(items[0]);
         
-//        for (int i = 1; i <= 6; i++) {
-//            VBox card = createCard("Item " + i, "paracetamol.jpg");
-//            medicineTilePane.getChildren().add(card);
-//        }
-        
         for(Medicine meds : medicines ) {
-        	VBox card = createCard(meds.getName(), "paracetamol.jpg");
+        	VBox card = createCard(meds.getName(), meds.getPicture());
         	medicineTilePane.getChildren().add(card);
         }
         
@@ -81,7 +100,7 @@ public class Controller {
 	    card.setAlignment(Pos.CENTER);
 	    card.setStyle("-fx-border-color: black; -fx-padding: 10; -fx-background-color: white;");
 	    
-	    Image image = new Image(getClass().getResourceAsStream("paracetamol.jpg"));
+	    Image image = new Image(getClass().getResourceAsStream(imagePath));
 
 	    
 	    ImageView imageView = new ImageView(image);
@@ -98,7 +117,7 @@ public class Controller {
     private void updateMedList() {
     	medicineTilePane.getChildren().clear();
     	for(Medicine meds : medicines ) {
-        	VBox card = createCard(meds.getName(), "paracetamol.jpg");
+        	VBox card = createCard(meds.getName(), meds.getPicture());
         	medicineTilePane.getChildren().add(card);
         }
     }
@@ -122,6 +141,24 @@ public class Controller {
     }
     
     
+    @FXML
+    private void removeSelectedSymptoms() {
+    	for(String text : selectedSymptoms) {
+    		symptomsList.getItems().remove(text);
+    	}
+    	symptomListData.removeAll(selectedSymptoms);
+    	medicines = engine.filterMedicines(symptomListData);
+    	updateMedList();
+    	selectedSymptoms.clear();
+    	
+    	if(symptomListData.isEmpty()) {
+    		medicines = archive.getMedicineList();
+    		updateMedList();
+    		
+    	}
+    }
+    
+    
     private class CheckBoxAtEndCell extends ListCell<String> {
         private Label label;
         private CheckBox checkBox;
@@ -136,6 +173,21 @@ public class Controller {
             HBox.setHgrow(spacer, Priority.ALWAYS);
             
             checkBox = new CheckBox();
+            
+            checkBox.setOnAction(event -> {
+                String item = getItem();
+                if (item != null) {
+                    if (checkBox.isSelected()) {
+                    	System.out.println("HE");
+                        if (!selectedSymptoms.contains(item)) {
+                            selectedSymptoms.add(item);
+                        }
+                    } else {
+                        selectedSymptoms.remove(item);
+                    }
+                    
+                }
+            });
             
             // Order: Label, Spacer, CheckBox (checkbox at end)
             hBox = new HBox(10, label, spacer, checkBox);

@@ -14,7 +14,7 @@ public class Loperamide extends Medicine {
 	
 	public Loperamide(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/Loperamide.jpg");	
+		this.setPicture("/images/Loperamide.jpg");	
 	}
 	
 	
@@ -26,7 +26,7 @@ public class Loperamide extends Medicine {
 		super(106, "Loperamide", new String[]{
 				"Loose Watery Stool", "Abdominal Cramps", "Frequent Bowel Movements", "indigestion"
 		});
-		this.setPicture("./images/Loperamide.jpg");
+		this.setPicture("/images/Loperamide.jpg");
 
 	}
 

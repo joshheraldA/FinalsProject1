@@ -14,7 +14,7 @@ public class Phenylephrine extends Medicine {
 	
 	public Phenylephrine(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/Phenylephrine.jpg");
+		this.setPicture("/images/Phenylephrine.jpg");
 	}
 	
 	/*
@@ -25,7 +25,7 @@ public class Phenylephrine extends Medicine {
 		super(104, "Phenylephrine", new String[]{
 				"Nasal Congestion", "Sinus Pressure", "Swollen Nasal Passages", "Ear Congestion"
 		});
-		this.setPicture("./images/Phenylephrine.jpg");
+		this.setPicture("/images/Phenylephrine.jpg");
 
 	}
 

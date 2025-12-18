@@ -13,7 +13,7 @@ public class Paracetamol extends Medicine {
 	 */
 	public Paracetamol(int id, String name, String[] symptoms) {
 		super(id, name, symptoms);
-		this.setPicture("./images/paracetamol.jpg");
+		this.setPicture("/images/Paracetamol.jpg");
 	}
 	
 	/*
@@ -23,7 +23,7 @@ public class Paracetamol extends Medicine {
 		super(102, "Paracetamol", new String[]{
 			"Headache", "Elevated Body Temperature", "Body Aches"
 		});
-		this.setPicture("./images/paracetamol.jpg");
+		this.setPicture("/images/paracetamol.jpg");
 
 	}
 }
