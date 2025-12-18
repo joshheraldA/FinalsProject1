@@ -17,7 +17,10 @@ public class SearchEngine {
 		for(Medicine medicine : MedicineArchive.getMedicineList()) {
 			for(String symptom: medicine.getSymptoms()) {
 				if(symptoms.contains(symptom)) {
-					filteredMedicines.add(medicine);
+					if(!filteredMedicines.contains(medicine)) {
+						filteredMedicines.add(medicine);
+					}
+					
 				}
 			}
 		}
